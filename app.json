@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "Nimal",
+    "slug": "nimal-gquzd4kchmnkhdd7vphe",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,13 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.user17g45.nimalgquzd4kchmnkhdd7vphe"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.user17g45.nimalgquzd4kchmnkhdd7vphe"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +38,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8be0fdc0-10d6-49b2-b9be-ee8846d788a1"
+      }
+    },
+    "owner": "17g45",
+    "updates": {
+      "url": "https://u.expo.dev/8be0fdc0-10d6-49b2-b9be-ee8846d788a1"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
