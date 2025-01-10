@@ -7,9 +7,13 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { useAuth } from '../../context/AuthContext';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const { user } = useAuth(); 
+
+  console.log("LOADED (tabs); user:", user);
 
   return (
     <Tabs
@@ -30,7 +34,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="account.fill" color={color} />,
         }}
       />
       <Tabs.Screen
@@ -40,6 +44,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
-    </Tabs>
+      <Tabs.Screen
+        name="exploreCopy"
+        options={{
+          title: 'Exploree',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="chevron.left.forwardslash.chevron.right" color={color} />,
+        }}
+      />
+    </Tabs> 
   );
 }
